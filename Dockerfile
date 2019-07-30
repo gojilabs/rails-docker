@@ -25,7 +25,7 @@ ENV RAILS_LOG_TO_STDOUT true
 
 # Install bundled gems
 RUN mkdir -p ${APP_DIR}
-COPY Gemfile Gemfile.lock ${APP_DIR}
+COPY Gemfile Gemfile.lock ${APP_DIR}/
 RUN cd ${APP_DIR} && bundle install --without=development test --jobs=5 --retry=5 --deployment
 
 # Copy entire project
