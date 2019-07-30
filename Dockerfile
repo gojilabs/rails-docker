@@ -42,4 +42,4 @@ WORKDIR ${APP_DIR}
 EXPOSE ${PORT}
 
 # Run startup commands
-CMD ["sh", "${APP_DIR}/run.sh"]
+CMD ["./run.sh"]
