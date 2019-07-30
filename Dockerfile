@@ -3,18 +3,21 @@ FROM gojilabs/ruby:${RUBY_VERSION}
 LABEL maintainer="Adam Sumner <adamsumner@gmail.com>"
 
 # Setup default environment variables
-ARG APP_ENV=${PROJECT_ENV}
 ARG APP_DIR=/var/app
 ARG AUTHENTICATION_SALT=bogus
-ARG NODE_ENV=${PROJECT_ENV}
 ARG PORT=3000
 ARG PROJECT_ENV=production
-ARG RACK_ENV=${PROJECT_ENV}
-ARG RAILS_ENV=${PROJECT_ENV}
 ARG REDIS_URL=redis://localhost:6379/1
 ARG SECRET_KEY_BASE=bogus
 ARG SECRET_SALT=bogus
 ARG UUID_NAMESPACE=bogus
+
+# Setup dependent environment variables
+ARG APP_ENV=${PROJECT_ENV}
+ARG GOJI_ENV=${PROJECT_ENV}
+ARG NODE_ENV=${PROJECT_ENV}
+ARG RACK_ENV=${PROJECT_ENV}
+ARG RAILS_ENV=${PROJECT_ENV}
 
 # Setup static environment variables
 ENV RAILS_SERVE_STATIC_FILES true
