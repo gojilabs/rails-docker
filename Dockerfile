@@ -5,6 +5,7 @@ LABEL maintainer="Adam Sumner <adamsumner@gmail.com>"
 # Setup default environment variables
 ARG APP_DIR=/var/app
 ARG AUTHENTICATION_SALT=bogus
+ARG CDN_HOST=""
 ARG PORT=3000
 ARG PROJECT_ENV=production
 ARG REDIS_URL=redis://localhost:6379/1
